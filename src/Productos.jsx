@@ -33,7 +33,7 @@ function Productos() {
   }];
 
   return (
-    <div className="flex gap-4 p-4">
+    <div className="flex flex-wrap gap-4 p-4">
       {productos.map((producto, index) => (
         <div key={index} onClick={() => enviarWhatsApp(producto)} className="p-2 mb-4 flex-shrink-0 w-64 rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform">
     <a href="#">
