@@ -58,7 +58,7 @@ function Olla_Presion() {
               onClick={() => enviarWhatsApp(producto.nombre)}
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
             >
-              Read more
+              Mas información
               <svg
                 className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                 aria-hidden="true"
