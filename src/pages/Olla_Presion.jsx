@@ -1,58 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import Empaque from '../src/assets/olla_presion.jpg';
-import aspas from '../src/assets/6aspas.jpg';
-import estufa from '../src/assets/estufa.jpg';
-import lavadora from '../src/assets/lavadora.jpg';
+import Empaque from '../assets/olla_presion.jpg';
 
 
-function Productos() {
-  const [search, setSearch] = useState("");
+function Olla_Presion() {
+      const [search, setSearch] = useState("");
+    
 
-  const enviarWhatsApp = (producto) => {
-    const numeroWhatsApp = '573153412730'; // sin el "+" y sin espacios
-    const mensaje = encodeURIComponent(`Hola, más información sobre ${producto}`);
-    const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-    window.open(url, '_blank');
-  };
-
-  const productos = [
-    {
-      nombre: 'Olla de presion',
-      imagen: Empaque,
-      descripcion: 'Bujias de alta calidad para un mejor rendimiento del motor.'
-    },
-    {
-      nombre: 'Ventiladores',
-      imagen: aspas,
-      descripcion: 'Helices de ventilador para una mejor circulación del aire.'
-    },
-    {
-      nombre: 'Estufas',
-      imagen: estufa,
-      descripcion: 'Repuestos para estufas de alta calidad.'
-    },
-    {
-      nombre: 'Lavadoras',
-      imagen: lavadora,
-      descripcion: 'Repuestos para lavadoras de alta calidad.'
-    }
-  ];
-
-  const productosFiltrados = search === ""
+    const productos = [
+        {
+          nombre: 'Empaque Olla de presion',
+          imagen: Empaque,
+          descripcion: 'Empaque de alta calidad para ollas de presión, asegurando un sellado perfecto.'
+        }
+      ];
+      const productosFiltrados = search === ""
     ? productos
     : productos.filter((p) =>
       p.nombre.toLowerCase().startsWith(search.toLowerCase())
     );
 
   return (
-  <>
-  <div className='flex gap-4 justify-center p-4'>
-  <Link to='/Olla-Presion'>Olla de presion</Link>
-  <Link to='/Ventiladores'>Ventiladores</Link>
-  <Link to='/Estufas'>Estufa</Link>
-  <Link to='/Lavadoras'>Lavadora</Link>
-  </div>
+    <>
+    <div className='flex gap-4 justify-center p-4'>
+        <Link to='/'>Volver</Link>
+    </div>
     <input
       type="text"
       placeholder="Buscar producto..."
@@ -106,8 +79,9 @@ function Productos() {
         </div>
       ))}
     </div>
-  </>
-  );
+    
+    </>
+  )
 }
 
-export default Productos;
+export default Olla_Presion
