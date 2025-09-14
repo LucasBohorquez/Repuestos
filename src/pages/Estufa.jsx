@@ -13,17 +13,17 @@ function Estufa() {
 
     const productos = [
         {
-          nombre: 'Estufa repuesto',
+          nombre: 'Valvula Chilena',
           imagen: estufa,
           descripcion: 'Repuestos para estufas de alta calidad.'
         },
         {
-          nombre: 'Olla de presion',
+          nombre: 'Valvula guinovart',
           imagen: estufa1,
           descripcion: 'Repuestos para estufas de alta calidad.'
         },
         {
-          nombre: 'Empaque Olla de presion',
+          nombre: 'Valvula chilena',
           imagen: estufa2,
           descripcion: 'Repuestos para estufas de alta calidad.'
         }
@@ -31,7 +31,7 @@ function Estufa() {
       const productosFiltrados = search === ""
     ? productos
     : productos.filter((p) =>
-      p.nombre.toLowerCase().startsWith(search.toLowerCase())
+      p.nombre.toLowerCase().includes(search.toLowerCase())
     );
 
   return (

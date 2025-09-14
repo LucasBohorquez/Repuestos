@@ -12,26 +12,26 @@ function Ventiladores() {
 
     const productos = [
         {
-          nombre: '6 Aspas Ventilador',
+          nombre: 'Helice 6 Aspas Samurai Ventilador',
           imagen: aspas,
           descripcion: 'Helices de ventilador de 6 aspas para una mejor circulación del aire.'
         },
         {
-          nombre: '4 Aspas Ventilador',
+          nombre: 'Helice 4 Aspas Samurai Ventilador',
           imagen: aspas1,
           descripcion: 'Helices de ventilador de 4 aspas para una mejor circulación del aire.'
         },
         {
-          nombre: 'Tapa Ventilador',
+          nombre: 'Careta Samurai Ventilador',
           imagen: tapa,
-          descripcion: 'Tapa para ventilador, protege y mejora la estética del mismo.'
+          descripcion: 'Careta para ventilador.'
         }
       ];
     
       const productosFiltrados = search === ""
         ? productos
         : productos.filter((p) =>
-          p.nombre.toLowerCase().startsWith(search.toLowerCase())
+          p.nombre.toLowerCase().includes(search.toLowerCase())
         );
 
   return (

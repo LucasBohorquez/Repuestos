@@ -42,11 +42,12 @@ function Productos() {
   const productosFiltrados = search === ""
     ? productos
     : productos.filter((p) =>
-      p.nombre.toLowerCase().startsWith(search.toLowerCase())
+      p.nombre.toLowerCase().includes(search.toLowerCase())
     );
 
   return (
   <>
+  
   <div className='flex flex-wrap justify-evenly py-4 text-2xl gap-5'>
   <Link to='/Olla-Presion'>Olla de presion</Link>
   <Link to='/Ventiladores'>Ventiladores</Link>

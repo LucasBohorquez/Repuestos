@@ -14,27 +14,27 @@ function Lavadora() {
 
     const productos = [
         {
-          nombre: 'Manual Lavadora repuesto',
+          nombre: 'Reloj secas mabe',
           imagen: manual,
           descripcion: 'Repuestos para lavadoras de alta calidad.'
         },
         {
-          nombre: 'Manual Lavadora repuesto',
+          nombre: 'Reloj desague mabe',
           imagen: manual1,
           descripcion: 'Repuestos para lavadoras de alta calidad.'
         },
         {
-          nombre: 'Manual Lavadora repuesto',
+          nombre: 'Relog desague haceb',
           imagen: manual2,
           descripcion: 'Repuestos para lavadoras de alta calidad.'
         },
         {
-          nombre: 'Digital Lavadora repuesto',
+          nombre: 'Valvula entrada agua dos salidas',
           imagen: digital,
           descripcion: 'Repuestos para lavadoras de alta calidad.'
         },
         {
-          nombre: 'Digital Lavadora repuesto',
+          nombre: 'Vanvula entrada agua dos salida haceb',
           imagen: digital1,
           descripcion: 'Repuestos para lavadoras de alta calidad.'
         }
@@ -43,7 +43,7 @@ function Lavadora() {
       const productosFiltrados = search === ""
         ? productos
         : productos.filter((p) =>
-          p.nombre.toLowerCase().startsWith(search.toLowerCase())
+          p.nombre.toLowerCase().includes(search.toLowerCase())
         );
 
   return (

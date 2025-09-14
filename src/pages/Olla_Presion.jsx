@@ -18,7 +18,7 @@ function Olla_Presion() {
       const productosFiltrados = search === ""
     ? productos
     : productos.filter((p) =>
-      p.nombre.toLowerCase().startsWith(search.toLowerCase())
+      p.nombre.toLowerCase().includes(search.toLowerCase())
     );
 
   return (
