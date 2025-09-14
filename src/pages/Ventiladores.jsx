@@ -8,6 +8,12 @@ import tapa from '../assets/ventilador.jpg';
 
 function Ventiladores() {
     const [search, setSearch] = useState("");
+    const enviarWhatsApp = (producto) => {
+    const numeroWhatsApp = '573153412730'; // sin el "+" y sin espacios
+    const mensaje = encodeURIComponent(`Hola, más información sobre ${producto}`);
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    window.open(url, '_blank');
+  };
     
 
     const productos = [
