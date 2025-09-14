@@ -23,17 +23,13 @@ function Olla_Presion() {
 
   return (
     <>
-    <div className='flex gap-4 justify-center p-4'>
+    <div className='flex gap-4 justify-center p-4 text-3xl'>
         <Link to='/'>Volver</Link>
     </div>
-    <input
-      type="text"
-      placeholder="Buscar producto..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      className="border rounded p-2 w-full max-w-xs mb-4"
-    />
-    <div className="flex flex-wrap gap-4 p-4">
+    <div className='flex justify-center'>
+      <input type="text" placeholder="Buscar producto..." value={search} onChange={(e) => setSearch(e.target.value)} className="border rounded p-2  w-[295px] mb-4"/>
+    </div>
+    <div className="flex flex-wrap gap-4 p-4 justify-center">
 
 
       {productosFiltrados.map((producto, index) => (
