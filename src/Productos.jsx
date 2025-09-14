@@ -47,19 +47,13 @@ function Productos() {
 
   return (
   <>
-  <div className='flex gap-4 justify-center p-4'>
+  <div className='flex flex-wrap gap-4 justify-center py-4'>
   <Link to='/Olla-Presion'>Olla de presion</Link>
   <Link to='/Ventiladores'>Ventiladores</Link>
   <Link to='/Estufas'>Estufa</Link>
   <Link to='/Lavadoras'>Lavadora</Link>
   </div>
-    <input
-      type="text"
-      placeholder="Buscar producto..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      className="border rounded p-2 w-full max-w-xs mb-4"
-    />
+    <input type="text" placeholder="Buscar producto..." value={search} onChange={(e) => setSearch(e.target.value)} className="border rounded p-2  w-[295px] mb-4"/>
     <div className="flex flex-wrap gap-4 p-4">
 
 
